@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformer_test>
+  <metadata>
+    <test_date>2024-01-15</test_date>
+    <transformer_id>T001</transformer_id>
+    <test_type>FRA</test_type>
+    <operator>Test Engineer</operator>
+  </metadata>
+  <measurements>
+    <measurement frequency="10" magnitude="45.2" phase="-12.5"/>
+    <measurement frequency="20" magnitude="43.8" phase="-15.2"/>
+    <measurement frequency="50" magnitude="41.5" phase="-22.8"/>
+    <measurement frequency="100" magnitude="38.9" phase="-35.4"/>
+    <measurement frequency="200" magnitude="35.2" phase="-48.9"/>
+    <measurement frequency="500" magnitude="30.8" phase="-65.2"/>
+    <measurement frequency="1000" magnitude="25.4" phase="-82.7"/>
+    <measurement frequency="2000" magnitude="18.9" phase="-105.3"/>
+    <measurement frequency="5000" magnitude="10.2" phase="-135.8"/>
+    <measurement frequency="10000" magnitude="2.8" phase="-165.4"/>
+    <measurement frequency="20000" magnitude="-5.6" phase="-185.2"/>
+    <measurement frequency="50000" magnitude="-15.3" phase="-205.8"/>
+    <measurement frequency="100000" magnitude="-25.8" phase="-225.4"/>
+    <measurement frequency="200000" magnitude="-35.2" phase="-245.9"/>
+    <measurement frequency="500000" magnitude="-45.6" phase="-265.3"/>
+    <measurement frequency="1000000" magnitude="-55.8" phase="-285.7"/>
+  </measurements>
+</transformer_test>
