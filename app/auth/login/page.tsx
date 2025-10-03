@@ -24,7 +24,7 @@ export default function LoginPage() {
     // ✅ Demo credentials
     if (email === "demo@fra.com" && password === "fra123") {
       localStorage.setItem("isLoggedIn", "true")
-      router.push("/") // redirect to dashboard
+      router.push("/dashboard") // redirect to dashboard
       return
     }
 

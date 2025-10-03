@@ -118,7 +118,7 @@ export default function RegisterPage() {
     localStorage.setItem("isLoggedIn", "true")
 
     // Redirect straight to dashboard
-    router.push("/")
+    router.push("/dashboard")
   }
 
   return (

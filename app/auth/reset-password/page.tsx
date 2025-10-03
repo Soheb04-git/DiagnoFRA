@@ -13,7 +13,7 @@ export default function ResetPasswordPage() {
 
   function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
-    console.log("[v0] reset password submit")
+    console.log("DiagnoFRA reset password submit")
   }
 
   return (
