@@ -89,6 +89,20 @@ export default function LoginPage() {
           Sign In
         </Button>
       </form>
+
+      <div className="mt-6 p-4 border rounded-lg bg-muted/20 text-center">
+        <h3 className="text-sm font-semibold text-foreground mb-2">Demo Credentials</h3>
+        <p className="text-sm text-muted-foreground">
+          <strong>Email:</strong> demo@fra.com
+        </p>
+        <p className="text-sm text-muted-foreground">
+          <strong>Password:</strong> fra123
+        </p>
+        <p className="text-xs text-muted-foreground mt-2 italic">
+          Use these to explore the dashboard without registration.
+        </p>
+      </div>
+
     </AuthCard>
   )
 }

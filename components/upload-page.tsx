@@ -1,5 +1,4 @@
 
-
 "use client"
 
 import { useCallback, useMemo, useRef, useState, useEffect } from "react"
@@ -12,7 +11,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Upload, FileText, CheckCircle, AlertCircle } from "lucide-react"
+import { Upload, FileText, CheckCircle, AlertCircle, Trash2 } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import {
   Table,
@@ -55,6 +54,7 @@ interface UploadPageProps {
     analysis?: any
   }) => void
   uploadedFiles: UploadedFileFromParent[]
+  onClearHistory?: () => void
 }
 
 type InFlightItem = {
@@ -66,7 +66,7 @@ type InFlightItem = {
   error?: string
 }
 
-export function UploadPage({ onFileUploaded, uploadedFiles }: UploadPageProps) {
+export function UploadPage({ onFileUploaded, uploadedFiles, onClearHistory }: UploadPageProps) {
   const [inFlight, setInFlight] = useState<InFlightItem[]>([])
   const [selectedDisplayId, setSelectedDisplayId] = useState<string | null>(null)
   const dialogReportRef = useRef<HTMLDivElement | null>(null)
@@ -312,6 +312,22 @@ export function UploadPage({ onFileUploaded, uploadedFiles }: UploadPageProps) {
                 <CardTitle>Uploaded Files</CardTitle>
                 <CardDescription>Processing status of your uploaded files</CardDescription>
               </div>
+
+            {/*Clear History button */}
+              {onClearHistory && (
+                <Button
+                  variant="destructive"
+                  size="sm"
+                  onClick={() => {
+                    if (confirm("Are you sure you want to clear all uploaded files?")) {
+                      onClearHistory()
+                    }
+                  }}
+                >
+                  <Trash2 className="h-4 w-4 mr-1" /> Clear History
+                </Button>
+              )}
+
             </CardHeader>
             <CardContent>
               <div className="overflow-x-auto w-full">
